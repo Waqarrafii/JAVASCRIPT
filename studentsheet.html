@@ -64,7 +64,7 @@
     <div class="container table-responsive mt-5">
         <table class="table ">
             <thead>
-                <tr>
+                <tr id="tab" onclick="add()">
                     <th scope="col">Name</th>
                     <th scope="col">Institute Name</th>
                     <th scope="col">Batch</th>
@@ -78,7 +78,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="" onclick="reset()">
+                <tr id="table">
                     <td scope="row" id="pname"></td>
                     <td id="piname"></td>
                     <td id="pbatch"></td>
@@ -88,6 +88,20 @@
                     <td id="om"></td>
                     <td id="per"></td>
                     <td id="grade"></td>
+                    <td><button type="reset" class="btn-close" onclick="clr()"></button></td>
+                </tr>
+
+                <tr id="table2">
+                    <td scope="row" id="pname"></td>
+                    <td id="piname"></td>
+                    <td id="pbatch"></td>
+                    <td id="pro"></td>
+                    <td id="prac"></td>
+                    <td id="mod"></td>
+                    <td id="om"></td>
+                    <td id="per"></td>
+                    <td id="grade"></td>
+                    <td><button type="reset" class="btn-close" onclick="clr()"></button></td>
                 </tr>
             </tbody>
         </table>
@@ -157,20 +171,19 @@
             document.getElementById("batch").value = "";
             document.getElementById("epro").value = "";
             document.getElementById("eprac").value = "";
-
-
-            document.getElementById("piname").value = "";
-            document.getElementById("pbatch").value = "";
-            document.getElementById("pro").value = "";
-            document.getElementById("prac").value = "";
-            document.getElementById("mod").value = "";
-            document.getElementById("om").value = "";
-            document.getElementById("per").value = "";
-            document.getElementById("grade").value = "";
-
-
+            document.getElementById("emod").value = "";
+            
         }
+    function clr() {
+        document.getElementById("table").innerHTML="";
+        location.reload
+    }
 
+    function add() {
+        var row = document.getElementById("tab").value;
+
+        document.getElementById("table2").innerHTML = row;
+    }
 
     </script>
 
