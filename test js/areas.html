@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>PJS Test</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+         <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <div class="d-flex justify-content-center mt-5">
+        <div class="w-25">
+            <h1 class="text-center">Calculate</h1>
+            <form>
+                <h2 class="text-center">Area of Rectangle</h2>
+                <div class="d-flex">
+                    <div class="mb-3 ms-1">
+                        <label for="exampleInputEmail1" class="form-label">Length</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3 ms-1">
+                        <label for="exampleInputEmail1" class="form-label">width</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                </div>
+                <div class="w-100 h-25 text-center display-1" id="rectangle">
+                    <button type="button" class="btn btn-primary" onclick="rectangle()">Submit</button>
+                </div>
+
+                <h2 class="text-center">Area of Square</h2>
+                <div class="d-flex">
+                    <div class="mb-3 ms-1" style="width: 200px;">
+                        <label for="exampleInputEmail1" class="form-label">Area</label>
+                        <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
+                    </div>
+                   
+                </div>
+                <div class="w-100 h-25 text-center display-1" id="square">
+                    <button type="button" class="btn btn-primary" onclick="areaofsquare()">Submit</button>
+                </div>
+
+                <h2 class="text-center">Area of Triangle</h2>
+                <div class="d-flex">
+                    <div class="mb-3 ms-1">
+                        <label for="exampleInputEmail1" class="form-label">Base</label>
+                        <input type="email" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3 ms-1">
+                        <label for="exampleInputEmail1" class="form-label">Height</label>
+                        <input type="email" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp">
+                    </div>
+                </div>
+                <div class="w-100 h-25 text-center display-1" id="Triangle">
+                    <button type="button" class="btn btn-primary" onclick="Triangle()">Submit</button>
+
+                </div>
+
+                <h2 class="text-center">Area of Circle</h2>
+                <div class="d-flex">
+                    <div class="mb-3 ms-1">
+                        <label for="exampleInputEmail1" class="form-label">Radius</label>
+                        <input type="email" class="form-control" id="exampleInputEmail4" aria-describedby="emailHelp">
+                    </div>
+            
+                </div>
+                <div class="w-100 h-25 text-center display-1" id="Circle">
+                    <button type="button" class="btn btn-primary" onclick="Circle()">Submit</button>
+                </div>
+
+                <h2 class="text-center">Area of Ellipse</h2>
+                <div class="d-flex">
+                    <div class="mb-3 ms-1">
+                        <label for="exampleInputEmail1" class="form-label">a</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3 ms-1">
+                        <label for="exampleInputEmail1" class="form-label">b</label>
+                        <input type="email" class="form-control" id="exampleInputEmail5" aria-describedby="emailHelp">
+                    </div>
+                </div>
+                <div class="w-100 h-25 text-center display-1" id="Ellipse">
+                    <button type="button" class="btn btn-primary" onclick="Ellipse()">Submit</button>
+                </div>
+                
+                <h2 class="text-center">Area of Trapezoid</h2>
+                <div class="d-flex">
+                    <div class="mb-3 ms-1">
+                        <label for="exampleInputEmail1" class="form-label">a</label>
+                        <input type="email" class="form-control" id="exampleInputEmail6" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3 ms-1">
+                        <label for="exampleInputEmail1" class="form-label">b</label>
+                        <input type="email" class="form-control" id="exampleInputEmail6" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3 ms-1">
+                        <label for="exampleInputEmail1" class="form-label">h</label>
+                        <input type="email" class="form-control" id="exampleInputEmail6" aria-describedby="emailHelp">
+                    </div>
+                </div>
+                <div class="w-100 h-25 text-center display-1" id="Trapezoid">
+                    <button type="button" class="btn btn-primary" onclick="Trapezoid()">Submit</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+
+
+
+    
+    <script>
+function rectangle() {
+    let length = document.getElementById("exampleInputEmail1").value;
+    let width = document.getElementById("exampleInputEmail1").value;
+
+    let cal = eval(parseFloat(length)*parseFloat(width));
+
+    document.getElementById("rectangle").innerHTML = cal;
+}
+function areaofsquare() {
+    let Area = document.getElementById("exampleInputEmail2").value;
+
+    let cal = eval(parseFloat(Area)*parseFloat(Area));
+
+    document.getElementById("square").innerHTML = cal;
+}
+function Triangle() {
+    let Base = document.getElementById("exampleInputEmail3").value;
+    let Height = document.getElementById("exampleInputEmail3").value;
+
+    let cal = eval(parseFloat(Base)*parseFloat(Height))/parseFloat(0.5);
+
+    document.getElementById("Triangle").innerHTML = cal;
+}
+function Circle() {
+    let Radius = document.getElementById("exampleInputEmail4").value;
+
+    let cal = eval(parseFloat(3.142)*parseFloat(Radius))*parseFloat(Radius);
+
+    document.getElementById("Circle").innerHTML = cal;
+}
+function Ellipse() {
+    let a = document.getElementById("exampleInputEmail5").value;
+    let b = document.getElementById("exampleInputEmail5").value;
+
+    let cal = eval(parseFloat(3.142)*parseFloat(a))*parseFloat(b);
+
+    document.getElementById("Ellipse").innerHTML = cal;
+}
+function Trapezoid() {
+    let a = document.getElementById("exampleInputEmail6").value;
+    let b = document.getElementById("exampleInputEmail6").value;
+    let h = document.getElementById("exampleInputEmail6").value;
+
+    let cal = eval(parseFloat(0.5)*parseFloat(a))+parseFloat(b)*parseFloat(h);
+
+    document.getElementById("Trapezoid").innerHTML = cal;
+}
+
+    </script>
+   
+</body>
+
+</html>
