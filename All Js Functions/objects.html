@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+
+</body>
+<script>
+    var Student ={
+        firstname : "Fatima",
+        lastname : "Noor",
+        food:["Biryani","Pizza","Pasta"],
+        fullname: function() {
+            return this.firstname + " " + this.lastname;
+        },
+        location :{
+            city:"Karachi",
+            country:"Paksitan"
+        }
+
+    }
+
+    document.write(Student.firstname, "<br>")
+    document.write(Student.lastname, "<br>")
+    document.write(Student.food[3], "<br>")
+    document.write(Student.fullname(), "<br>")
+    document.write(Student.location.city, "<br>")
+   </script>
+</html>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="col-md-3">
+    <div class="card">
+      <img class="card-img-top" src="https://images.unsplash.com/photo-1676838657113-79bf37e0851a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDV8NnNNVmpUTFNrZVF8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="Title">
+      <div class="card-body">
+        <h4 class="card-title">Moon</h4>
+        <p class="card-text">Sky</p>
+        <p class="card-text">100</p>
+<button type="button" class="btn btn-primary" onclick="func(this)" data-id="1" data-product-name="Moon" data-desc="Sky"  data-price="100" data-image="https://images.unsplash.com/photo-1676838657113-79bf37e0851a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDV8NnNNVmpUTFNrZVF8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Buy Now
+  </button>
+      </div>
+    </div>
+</div></div>
+  
+
+
+<!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        
+            
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+                <th scope="col">Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="">
+                <td scope="row" id="1"></td>
+                <td id="2"></td>
+                <td id="3"></td>
+                <td id="4"></td>
+                <td><img src="" alt="" id="5" height="50px" width="50px"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+<script>
+    function func(a) {
+        var id = a.getAttribute("data-id");
+        document.getElementById("1").innerHTML = id;
+        var name = a.getAttribute("data-product-name");
+        document.getElementById("2").innerHTML = name;
+        var desc = a.getAttribute("data-desc");
+        document.getElementById("3").innerHTML = desc;
+        var price = a.getAttribute("data-price");
+        document.getElementById("4").innerHTML = price;
+        var img = a.getAttribute("data-image");
+        document.getElementById("5").src = img;
+    }
+</script>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+<!-- 
+
+var a = [];
+function func(b) {
+var id = b.getAttribute("data-id");
+var name =
+var price
+b.getAttribute("data-name");
+b.getAttribute("data-price");
+var img = b.getAttribute("data-img"); var obj -
+id: id,
+name name,
+price: price,
+img img
+a.push(obj);
+localStorage.setItem("kfc"
+3
+JSON.stringify(a));
+var get= JSON.parse(localStorage.getItem("kfc"));
+var table = "<tr> <th>Id</th> <th>Name</th> <th>Price</th> <th>Image</th> </tr>" for (let i = 0; i <a.length; i++) {
+}
+table += "<tr><td>" + get[i].id + "</td><td>" + get[i].name +
+"</td><td>" + get[i].price + "</td><td>" + "<img id='img123' src =" + get[i].img +
+document.getElementById("table_id").innerHTML
+}
+</script>
+<script src="products.js"></script>
+</body>
+</html>
+=
+table;
+"</td></tr>" -->
