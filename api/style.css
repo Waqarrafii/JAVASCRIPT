@@ -1,0 +1,76 @@
+body{
+    
+          background-image: url('https://mlk1kpjw0crg.i.optimole.com/w:1080/h:675/q:mauto/rt:fill/g:sm/https://www.fulltimefamilies.com/wp-content/uploads/2021/08/AFBC63E6-6A23-4933-8F1E-3FD3FAB5054D.jpeg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;  
+          background-size: cover;
+       
+}
+
+#cont{
+    margin-left: 450px;
+}
+
+button {
+    padding: 0.1em 0.25em;
+    width: 7rem;
+    height: 3.5rem;
+    background-color: #212121;
+    border: 0.08rem solid #fff;
+    border-radius: 0.3rem;
+    font-size: 12px;
+    margin-left: 150px;
+  }
+  
+  button span {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0.4em;
+    width: 7rem;
+    height: 3.5rem;
+    background-color: #212121;
+    border-radius: 0.3rem;
+    font-size: 12px;
+    color: #fff;
+    border: 0.08em solid #fff;
+    box-shadow: 0 0.4em 0.1em 0.019em #fff;
+  }
+  
+  button span:hover {
+    transition: all 0.5s;
+    transform: translate(0, 0.4em);
+    box-shadow: 0 0 0 0 #fff;
+  }
+  
+  button span:not(hover) {
+    transition: all 1s;
+  }
+  
+  
+
+@keyframes bt {
+  0% { box-shadow: 0 0 0 0 var(--hover); }
+}
+#id_input{
+   background-color: rgb(24, 24, 56) ;
+   text-align: center;
+   opacity: 0.3;
+   width: 480px;
+   color: #fff;
+   height: 65px;
+}
+
+#temperature{
+    font-size: 6em;
+    margin-top: 25px;
+    margin-right: 190px;
+    text-shadow: 4px 4px 2px #87cf84;
+    color: #fff;
+}
+#description{
+    margin-left: 250px;
+    color: aliceblue;
+    font-size: 2em;
+}
