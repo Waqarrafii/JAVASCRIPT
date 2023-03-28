@@ -24,11 +24,14 @@
 <body>
 
 <div class="container" id="cont">
-    <input type="text" class="form-control mt-5" id="id_input" placeholder="Enter City Name">
-    <button type="button" class="btn btn-dager mt-3" onclick="getweather()"><span>Submit</span></button>
-    <h2 id="temperature"></h2>
-    <h4 id="description"></h4>
-    <img src="" alt="" id="icon">
+   <div class="row">
+    <div class=".col-12 .col-md-8">
+        <input type="text" class="form-control mt-5" id="id_input" oninput="getweather()" placeholder="Enter City Name">
+        <h2 id="temperature"></h2>
+        <h4 id="description"></h4>
+        <img src="" alt="" id="icon">
+    </div>
+   </div>
 </div>
 
  <script>
