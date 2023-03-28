@@ -11,48 +11,7 @@ body{
     margin-left: 450px;
 }
 
-button {
-    padding: 0.1em 0.25em;
-    width: 7rem;
-    height: 3.5rem;
-    background-color: #212121;
-    border: 0.08rem solid #fff;
-    border-radius: 0.3rem;
-    font-size: 12px;
-    margin-left: 150px;
-  }
-  
-  button span {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    bottom: 0.4em;
-    width: 7rem;
-    height: 3.5rem;
-    background-color: #212121;
-    border-radius: 0.3rem;
-    font-size: 12px;
-    color: #fff;
-    border: 0.08em solid #fff;
-    box-shadow: 0 0.4em 0.1em 0.019em #fff;
-  }
-  
-  button span:hover {
-    transition: all 0.5s;
-    transform: translate(0, 0.4em);
-    box-shadow: 0 0 0 0 #fff;
-  }
-  
-  button span:not(hover) {
-    transition: all 1s;
-  }
-  
-  
 
-@keyframes bt {
-  0% { box-shadow: 0 0 0 0 var(--hover); }
-}
 #id_input{
    background-color: rgb(24, 24, 56) ;
    text-align: center;
