@@ -1,93 +1,146 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>Title</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS v5.2.1 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-    </script>
-
-    <style>
-        body{
-    
-    background-image: url('https://www.dolby.com/siteassets/xf-site/blocks/hero/netflix-gradient.png?width=1440&crop=1599,0.56');
-    background-repeat: no-repeat;
-    background-attachment: fixed;  
-    background-size: cover;
-}
-#idinput{
-    background-color: rgb(24, 24, 56) ;
-   text-align: center;
-   margin-left: 500px;
-   /* margin-top: 100px; */
-   opacity: 0.3;
-   width: 150px;
-   color: #fff;
-   height: 45px;
-}
-#butn{
-    margin-left: 850px;
-    margin-top: 50px;
-}
-
-
-    </style>
+	<link rel="stylesheet" href="style.css">
+	<title></title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
 </head>
+<style>
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	.body {
+		font-family: 'Arial', sans-serif;
+		-webkit-font-smoothing: antialiased;
+		background: #000;
+		color: #999;
+	}
+
+
+	.showcase {
+		width: 100%;
+		height: 100vh;
+		position: relative;
+		background: url('https://i.ibb.co/vXqDmnh/background.jpg') no-repeat center center/cover;
+	}
+
+	.showcase::after {
+		
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		
+		background: rgba(0, 0, 0, 0.65);
+		
+	}
+
+	.logo {
+		position: relative;
+		z-index: 2;
+		height: 90px;
+	}
+
+	.logo img {
+		width: 170px;
+		position: absolute;
+		top: 20px;
+		left: 40px;
+	}
+#idinput{
+    width: 280px;
+    height: 50px;
+    opacity: 0.3;
+    text-align: center;
+}
+#exampleModal{
+    align-items: center;
+}
+</style>
 
 <body>
+	<header class="showcase">
 
-    <div class="netflixLogo">
-        <a id="logo" href="#home"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/logo.PNG?raw=true" alt="Logo Image"></a>
-      </div>
-      <button onclick="getmovie()" id="butn">FIND</button>
-    <input type="text" class="form-control w-25" id="idinput">
-   
-    
- 
-    </div>
-     <script>
-         function getmovie() {
-             var searchTerms = document.getElementById("idinput").value;
- 
-             fetch(`https://www.omdbapi.com/?t=${searchTerms}&apikey=23ceb873`)
-                 .then(response => response.json())
-                 .then(data => {
-                     var {
-                         Title, Year, Rated, Released, Runtime, Genre, Director, Writer, Actors, Plot, Language, Poster
-                     } = data;
-                     document.getElementById("moviedetails").innerHTML = `
- <h2>${Title} (${Year})</h2>
- <img src="${Poster}" alt=" Movie Poster"
- <ul>
-     <li><strong>Rated:</strong>${Rated}</li>
-     <li><strong>Released:</strong>${Released}</li>
-     <li><strong>Runtime:</strong>${Runtime}</li>
-     <li><strong>Genre:</strong>${Genre}</li>
-     <li><strong>Director:</strong>${Director}</li>
-     <li><strong>Actors:</strong>${Actors}</li>
-     <li><strong>Plot:</strong>${Plot}</li>
-     <li><strong>Language:</strong>${Language}</li>
-     <li><strong>Writer:</strong>${Writer}</li>
- </ul>
- `;
-                 })
-                 .catch(error => console.error(error));
-         }
-     </script>
- 
-  
+
+		<div class="logo">
+			<img src="https://i.ibb.co/r5krrdz/logo.png">
+		</div class="showcases">
+
+		<div class="showcase-content">
+
+
+
+			<div class="d-flex justify-content-center mt-5 ">
+				<input type="text" class="" id="idinput">
+
+				<button class="btn btn-danger ms-4" onclick="getmovie()" data-bs-toggle="modal"
+					data-bs-target="#exampleModal">Search</button>
+			</div>
+
+
+			<div id="modal" class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Movies</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body" id="moviedetails">
+
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<script>
+			function getmovie() {
+				var searchTerms = document.getElementById("idinput").value;
+
+				fetch(`https://www.omdbapi.com/?t=${searchTerms}&apikey=23ceb873`)
+					.then(response => response.json())
+					.then(data => {
+						var {
+							Title, Year, Rated, Released, Runtime, Genre, Director, Writer, Actors, Plot, Language, Poster
+						} = data;
+						document.getElementById("moviedetails").innerHTML = `			
+		<h2>${Title} (${Year})</h2>
+		<img src="${Poster}" alt=" Movie Poster"
+		<ul>
+			<li><strong>Rated:</strong>${Rated}</li>
+			<li><strong>Released:</strong>${Released}</li>
+			<li><strong>Runtime:</strong>${Runtime}</li>
+			<li><strong>Genre:</strong>${Genre}</li>
+			<li><strong>Director:</strong>${Director}</li>
+			<li><strong>Actors:</strong>${Actors}</li>
+			<li><strong>Plot:</strong>${Plot}</li>
+			<li><strong>Language:</strong>${Language}</li>
+			<li><strong>Writer:</strong>${Writer}</li>
+		</ul>`;
+        })
+					.catch(error => console.error(error));
+			}
+		</script>
+		</div>
+		</div>
+	</header>
+
+
 </body>
 
 </html>
